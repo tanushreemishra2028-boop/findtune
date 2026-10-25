@@ -1,0 +1,6 @@
+{
+  "name": "FindTune",
+  "description": "Mobile-friendly music discovery and promotion app using speech lyrics recognition and YouTube Music integration.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
