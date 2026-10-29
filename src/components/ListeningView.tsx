@@ -192,18 +192,13 @@ export const ListeningView: React.FC<ListeningViewProps> = ({
 
   return (
     <div className="flex flex-col items-center justify-between min-h-[78vh] px-4 py-3 max-w-lg mx-auto w-full">
-      {/* Top Dodo Payment Fee Notice */}
+      {/* Preview notice */}
       <div className="w-full text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 shadow-sm">
           <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-medium">FindTune Discovery Gate</span>
+          <span className="font-medium">FindTune preview</span>
           <span className="text-slate-600">·</span>
-          <span className="font-bold text-rose-400 font-mono">₹20 per search</span>
-          <span className="text-slate-600">·</span>
-          <span className="text-[11px] text-slate-400 flex items-center gap-1">
-            <Lock className="w-2.5 h-2.5 text-slate-400" />
-            Dodo Payments
-          </span>
+          <span className="font-bold text-rose-400">Sample catalog only</span>
         </div>
       </div>
 
@@ -346,7 +341,7 @@ export const ListeningView: React.FC<ListeningViewProps> = ({
           )}
         </div>
 
-        {/* Primary Action Button: "Find Song" triggering ₹20 Dodo Payments checkout */}
+        {/* Search the sample catalog. */}
         <div className="mt-3.5">
           <button
             onClick={handleStopAndSearch}
@@ -356,36 +351,28 @@ export const ListeningView: React.FC<ListeningViewProps> = ({
             {isCreatingCheckout ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                <span>Creating Dodo ₹20 Checkout Session...</span>
+                <span>Preparing preview...</span>
               </>
             ) : isSearching ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                <span>Searching YouTube Music...</span>
+                <span>Searching sample catalog...</span>
               </>
             ) : (
               <>
                 <Search className="w-4 h-4" />
                 <span>Find Song</span>
                 <span className="px-2 py-0.5 rounded-md bg-black/30 text-white font-mono text-xs">
-                  ₹20 via Dodo
+                  Free preview
                 </span>
                 <ArrowRight className="w-4 h-4 ml-0.5" />
               </>
             )}
           </button>
 
-          {/* Payment rails micro indicator */}
+          {/* Preview limitation */}
           <div className="flex items-center justify-center gap-3 mt-2 text-[10px] text-slate-400">
-            <span className="flex items-center gap-1">
-              <Smartphone className="w-3 h-3 text-emerald-400" />
-              UPI (GPay / PhonePe / Paytm / QR)
-            </span>
-            <span className="text-slate-600">·</span>
-            <span className="flex items-center gap-1">
-              <CreditCard className="w-3 h-3 text-rose-400" />
-              Debit & Credit Cards
-            </span>
+            <span>No payment is collected. Live music search is not connected yet.</span>
           </div>
         </div>
       </div>
