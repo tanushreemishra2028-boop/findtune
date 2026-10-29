@@ -62,10 +62,10 @@ export const IntroPermission: React.FC<IntroPermissionProps> = ({
 
       {/* Main Title & Subtitle */}
       <h1 className="text-3xl font-extrabold tracking-tight text-white mb-3">
-        Find Any Track by Speaking Lyrics
+        Try FindTune with Sample Songs
       </h1>
       <p className="text-sm text-slate-400 leading-relaxed mb-8 max-w-sm">
-        Can’t remember the title? Just speak or sing a snippet of the lyrics. FindTune listens, transcribes your voice, and finds the exact song on YouTube Music.
+        Speak or type a lyric snippet to search a small sample catalog. Live music search is not connected in this preview.
       </p>
 
       {/* Feature Bullet Points */}
@@ -76,7 +76,7 @@ export const IntroPermission: React.FC<IntroPermissionProps> = ({
           </div>
           <div>
             <div className="text-xs font-semibold text-slate-200">Real-Time Speech-to-Text</div>
-            <div className="text-[11px] text-slate-400">Speaks into your mic, transcribing words instantly with zero lag.</div>
+            <div className="text-[11px] text-slate-400">Use your browser’s speech recognition when available, or type the words instead.</div>
           </div>
         </div>
 
@@ -85,8 +85,8 @@ export const IntroPermission: React.FC<IntroPermissionProps> = ({
             <Sparkles className="w-4 h-4 text-amber-400" />
           </div>
           <div>
-            <div className="text-xs font-semibold text-slate-200">YouTube Music Scraper Matching</div>
-            <div className="text-[11px] text-slate-400">Powered by the Apify YouTube Music integration for high-accuracy track discovery.</div>
+            <div className="text-xs font-semibold text-slate-200">Sample Song Matching</div>
+            <div className="text-[11px] text-slate-400">Try the sample song catalog. Live music search is coming later.</div>
           </div>
         </div>
 
@@ -95,8 +95,8 @@ export const IntroPermission: React.FC<IntroPermissionProps> = ({
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
           </div>
           <div>
-            <div className="text-xs font-semibold text-slate-200">Private & Client-Side</div>
-            <div className="text-[11px] text-slate-400">Audio stays in your browser; speech recognition processes voice on the fly.</div>
+            <div className="text-xs font-semibold text-slate-200">Your Choice</div>
+            <div className="text-[11px] text-slate-400">You can try the preview without giving microphone access.</div>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@ export const IntroPermission: React.FC<IntroPermissionProps> = ({
         <span>·</span>
         <span>Mobile Optimized</span>
         <span>·</span>
-        <span>YouTube Music Connected</span>
+        <span>Sample Catalog Preview</span>
       </div>
     </div>
   );

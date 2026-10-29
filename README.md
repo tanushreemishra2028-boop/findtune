@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# FindTune
 
-# Run and deploy your AI Studio app
+This repository contains the recovered AI Studio source for FindTune. The app currently runs as a **free sample-catalog preview**. It does not charge users or claim that a sample match came from a live music search.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/433bf660-6b02-487b-a7c4-1e94888c40db
+```sh
+npm install
+npm run dev
+```
 
-## Run Locally
+`npm run build` produces the static site in `dist/`. Vercel can build this repository with that command and publish `dist/`.
 
-**Prerequisites:**  Node.js
+## Before adding live search or payments
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The original export included an API token in browser code and a test payment flow that could label an unpaid session as paid. They are removed from this preview. Use a server-side API for third-party tokens, and verify payment status with the payment provider on the server before unlocking a paid result. Never place credentials in Vite client environment variables or commit them to this repository. Rotate any token previously committed to the public repository.
